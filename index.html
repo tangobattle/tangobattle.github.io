@@ -148,11 +148,11 @@
             <main class="px-3">
                 <div class="container my-3">
                     <h1>
-                        <span lang="en" data-localize
-                            >Battle Network 6 rollback!
+                        <span lang="en" data-localize>
+                            Battle Network 6 rollback!
                         </span>
-                        <span lang="ja" data-localize
-                            >EXE6 ロールバックネットコード
+                        <span lang="ja" data-localize>
+                            EXE6 ロールバックネットコード
                         </span>
                     </h1>
                     <p class="lead">
@@ -164,7 +164,7 @@
                             一緒に「ロックマンエグゼ」をロールバックネットプレイでオンラインプレイしましょう！
                         </span>
                     </p>
-                    <p class="lead">
+                    <div class="d-grid col-6 mx-auto">
                         <a
                             href="https://github.com/tangobattle/tango/releases"
                             id="download-button"
@@ -175,33 +175,38 @@
                             <span lang="ja" data-localize
                                 >ダウンロード開始</span
                             >
-                            <small><span id="release-version"></span></small
-                        ></a>
-                        <script>
-                            (async () => {
-                                const releases = await (
-                                    await fetch(
-                                        "https://api.github.com/repos/tangobattle/tango/releases"
-                                    )
-                                ).json();
-                                const latest = releases.find(
-                                    (r) => !r.prerelease
-                                );
+                            <span
+                                id="spinner"
+                                class="spinner-border spinner-border-sm"
+                                role="status"
+                                aria-hidden="true"
+                            ></span>
+                            <small id="release-version"></small>
+                        </a>
+                    </div>
+                    <script>
+                        (async () => {
+                            const releases = await (
+                                await fetch(
+                                    "https://api.github.com/repos/tangobattle/tango/releases"
+                                )
+                            ).json();
+                            const latest = releases.find((r) => !r.prerelease);
 
-                                document.getElementById(
-                                    "release-version"
-                                ).textContent = "v" + latest.name;
+                            document.getElementById("spinner").style.display =
+                                "none";
+                            document.getElementById(
+                                "release-version"
+                            ).textContent = "v" + latest.name;
 
-                                const downloadUrl = latest.assets.find((a) =>
-                                    a.browser_download_url.endsWith(".exe")
-                                ).browser_download_url;
+                            const downloadUrl = latest.assets.find((a) =>
+                                a.browser_download_url.endsWith(".exe")
+                            ).browser_download_url;
 
-                                document.getElementById(
-                                    "download-button"
-                                ).href = downloadUrl;
-                            })();
-                        </script>
-                    </p>
+                            document.getElementById("download-button").href =
+                                downloadUrl;
+                        })();
+                    </script>
                 </div>
             </main>
 
