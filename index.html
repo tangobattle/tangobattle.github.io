@@ -15,6 +15,11 @@
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
         />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
         <style>
             .btn-secondary,
             .btn-secondary:hover,
@@ -58,6 +63,7 @@
         </style>
     </head>
     <body class="d-flex h-100 text-center text-white bg-dark">
+        <script src="/langselect.js"></script>
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <header class="mb-auto">
                 <div>
@@ -77,9 +83,10 @@
                     <nav
                         class="nav nav-masthead justify-content-center float-md-end"
                     >
-                        <a class="nav-link active" aria-current="page" href="/"
-                            >Home</a
-                        >
+                        <a class="nav-link active" aria-current="page" href="/">
+                            <span lang="en" data-localize>Home</span>
+                            <span lang="ja" data-localize>ホーム</span>
+                        </a>
                         <a
                             class="nav-link"
                             href="https://discord.gg/zbQngJHwSg"
@@ -98,16 +105,64 @@
                             target="_blank"
                             ><i class="bi-twitter me-1"></i> Twitter</a
                         >
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="language-menu-link"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <i
+                                class="bi-translate me-1"
+                                data-localize
+                                title="Language"
+                                lang="en"
+                            ></i>
+                            <i
+                                class="bi-translate me-1"
+                                data-localize
+                                title="言語"
+                                lang="ja"
+                            ></i>
+                        </a>
+                        <ul
+                            class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                            aria-labelledby="language-menu-link"
+                        >
+                            <li lang="en">
+                                <a class="dropdown-item" href="?lang=en"
+                                    >English</a
+                                >
+                            </li>
+                            <li lang="ja">
+                                <a class="dropdown-item" href="?lang=ja"
+                                    >日本語</a
+                                >
+                            </li>
+                        </ul>
                     </nav>
                 </div>
             </header>
 
             <main class="px-3">
                 <div class="container my-3">
-                    <h1>Battle Network 6 rollback.</h1>
+                    <h1>
+                        <span lang="en" data-localize
+                            >Battle Network 6 rollback!
+                        </span>
+                        <span lang="ja" data-localize
+                            >EXE6 ロールバックネットコード
+                        </span>
+                    </h1>
                     <p class="lead">
-                        Play Mega Man Battle Network online with rollback
-                        netplay.
+                        <span lang="en" data-localize>
+                            Play Mega Man Battle Network online with rollback
+                            netplay.
+                        </span>
+                        <span lang="ja" data-localize>
+                            「ロックマンエグゼ」をロールバックネットプレイでオンラインプレイする。
+                        </span>
                     </p>
                     <p class="lead">
                         <a
@@ -115,7 +170,11 @@
                             id="download-button"
                             class="btn btn-lg btn-secondary fw-bold border-white bg-white"
                             target="_blank"
-                            >Download
+                        >
+                            <span lang="en" data-localize>Download</span>
+                            <span lang="ja" data-localize
+                                >ダウンロード開始</span
+                            >
                             <small><span id="release-version"></span></small
                         ></a>
                         <script>
@@ -148,13 +207,25 @@
 
             <footer class="mt-auto text-white-50">
                 <p>
-                    Mega Man Battle Network is a trademark of
-                    <a
-                        href="https://www.capcom.com"
-                        target="_blank"
-                        class="text-white"
-                        >Capcom Co., LTD</a
-                    >.
+                    <span lang="en" data-localize>
+                        Mega Man Battle Network is a trademark of
+                        <a
+                            href="https://www.capcom.com"
+                            target="_blank"
+                            class="text-white"
+                            >CAPCOM CO., LTD</a
+                        >.
+                    </span>
+                    <span lang="ja" data-localize>
+                        ロックマンエグゼは
+                        <a
+                            href="https://www.capcom.com"
+                            target="_blank"
+                            class="text-white"
+                            >CAPCOM CO., LTD</a
+                        >
+                        の登録商標です。
+                    </span>
                 </p>
             </footer>
         </div>
