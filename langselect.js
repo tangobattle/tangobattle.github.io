@@ -1,6 +1,6 @@
-let LANG;
-
 function initLangSelector(languages) {
+    let LANG;
+
     function createLangStyle() {
         const style = document.createElement("style");
         style.textContent = "[lang][data-localize] { display: none; }";
@@ -39,9 +39,9 @@ function initLangSelector(languages) {
                 currentLanguage = navigator.language.split(/-/)[0];
             }
 
-            currentLanguage = currentLanguage || languages[0].code;
-            if (languages.findIndex((l) => l.code == currentLanguage) == -1) {
-                currentLanguage = languages[0].code;
+            currentLanguage = currentLanguage || languages[0];
+            if (languages.indexOf(currentLanguage) == -1) {
+                currentLanguage = languages[0];
             }
 
             return currentLanguage;
@@ -49,7 +49,4 @@ function initLangSelector(languages) {
     );
 }
 
-initLangSelector([
-    { code: "en", name: "en" },
-    { code: "ja", name: "日本語" },
-]);
+initLangSelector(["en", "ja", "zh"]);
