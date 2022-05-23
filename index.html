@@ -10,6 +10,11 @@
             integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
             crossorigin="anonymous"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css"
+            type="text/css"
+        />
         <link rel="icon" href="/icon.png" />
         <link
             rel="stylesheet"
@@ -183,25 +188,90 @@
                         </span>
                     </p>
                     <div class="d-grid col-6 mx-auto">
-                        <a
-                            href="https://github.com/tangobattle/tango/releases"
-                            id="download-button"
-                            class="btn btn-lg btn-secondary fw-bold border-white bg-white"
-                            target="_blank"
-                        >
-                            <span lang="en" data-localize>Download</span>
-                            <span lang="ja" data-localize>ダウンロード</span>
-                            <span lang="zh" data-localize>下载</span>
-                            <span
-                                id="spinner"
-                                class="spinner-border spinner-border-sm"
-                                role="status"
-                                aria-hidden="true"
-                            ></span>
-                            <small id="release-version"></small>
-                        </a>
+                        <div class="btn-group">
+                            <a
+                                href="https://github.com/tangobattle/tango/releases"
+                                id="download-button"
+                                class="btn btn-lg btn-secondary fw-bold border-white bg-white"
+                                target="_blank"
+                            >
+                                <i
+                                    class="si si-windows me-1 align-middle d-none"
+                                    id="download-button-icon-windows"
+                                ></i>
+                                <i
+                                    class="si si-linux me-1 align-middle d-none"
+                                    id="download-button-icon-linux"
+                                ></i>
+                                <span lang="en" data-localize>Download</span>
+                                <span lang="ja" data-localize
+                                    >ダウンロード</span
+                                >
+                                <span lang="zh" data-localize>下载</span>
+                                <span
+                                    id="spinner"
+                                    class="spinner-border spinner-border-sm"
+                                    role="status"
+                                    aria-hidden="true"
+                                ></span>
+                                <small id="release-version"></small>
+                            </a>
+                            <button
+                                type="button"
+                                id="download-button-dropdown"
+                                class="btn btn-lg btn-secondary border-white bg-white dropdown-toggle dropdown-toggle-split flex-grow-0"
+                                disabled
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                <span class="visually-hidden">
+                                    <span lang="en" data-localize
+                                        >Toggle Dropdown</span
+                                    >
+                                    <span lang="ja" data-localize
+                                        >トグルドロップダウン</span
+                                    >
+                                    <span lang="zh" data-localize
+                                        >切换下拉菜单</span
+                                    >
+                                </span>
+                            </button>
+                            <ul
+                                class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                            >
+                                <li>
+                                    <a
+                                        class="dropdown-item"
+                                        id="windows-download-link"
+                                        href="https://github.com/tangobattle/tango/releases"
+                                        ><i
+                                            class="si si-windows me-1 align-middle"
+                                        ></i>
+                                        Windows x64</a
+                                    >
+                                    <a
+                                        class="dropdown-item"
+                                        id="linux-download-link"
+                                        href="https://github.com/tangobattle/tango/releases"
+                                        ><i
+                                            class="si si-linux me-1 align-middle"
+                                        ></i>
+                                        Linux x64</a
+                                    >
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <script>
+                        function getOS() {
+                            if (
+                                window.navigator.userAgent.indexOf("Linux") !=
+                                -1
+                            ) {
+                                return "linux";
+                            }
+                            return "windows";
+                        }
                         (async () => {
                             const releases = await (
                                 await fetch(
@@ -216,12 +286,34 @@
                                 "release-version"
                             ).textContent = "v" + latest.name;
 
-                            const downloadUrl = latest.assets.find((a) =>
-                                a.browser_download_url.endsWith(".exe")
-                            ).browser_download_url;
+                            const downloadUrls = {
+                                windows: latest.assets.find((a) =>
+                                    a.browser_download_url.endsWith(".exe")
+                                ).browser_download_url,
+                                linux: latest.assets.find((a) =>
+                                    a.browser_download_url.endsWith(".AppImage")
+                                ).browser_download_url,
+                            };
+
+                            document.getElementById(
+                                "download-button-dropdown"
+                            ).disabled = false;
+
+                            document.getElementById(
+                                "windows-download-link"
+                            ).href = downloadUrls.windows;
+                            document.getElementById(
+                                "linux-download-link"
+                            ).href = downloadUrls.linux;
+
+                            const os = getOS();
+
+                            document
+                                .getElementById(`download-button-icon-${os}`)
+                                .classList.remove("d-none");
 
                             document.getElementById("download-button").href =
-                                downloadUrl;
+                                downloadUrls[os];
                         })();
                     </script>
                 </div>
