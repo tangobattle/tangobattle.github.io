@@ -18,7 +18,7 @@
         <link rel="icon" href="/favicon.png" />
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
         />
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
@@ -33,15 +33,25 @@
                 text-shadow: none;
             }
 
-            body {
-                text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
-                box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
-                background: url("background.png") no-repeat bottom -40px right -40px;
-                background-size: 640px 640px;
+            .bg-tango {
+                background-color: #4caf50;
             }
 
-            .cover-container {
-                max-width: 42em;
+            .text-tango {
+                color: #4caf50;
+            }
+
+            .icon-square {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+            }
+
+            body {
+                background: url("background.png") no-repeat bottom -40px right -40px;
+                background-size: 640px 640px;
+                max-width: 1080px;
             }
 
             .nav-masthead .nav-link {
@@ -65,24 +75,34 @@
                 color: #fff;
                 border-bottom-color: #fff;
             }
+
+            .material-symbols-outlined {
+                font-weight: inherit !important;
+                font-size: inherit !important;
+                line-height: inherit !important;
+                font-variation-settings: "FILL" 1;
+            }
         </style>
     </head>
-    <body class="d-flex h-100 text-center text-white bg-dark">
+    <body class="bg-dark text-light d-flex flex-column h-100 mx-auto">
         <script src="/langselect.js"></script>
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-            <header class="mb-auto">
-                <div>
+        <main class="flex-shrink-0">
+            <div class="container py-4">
+                <header class="pb-3 mb-4">
                     <h3 class="float-md-start mb-0">
-                        <a class="text-decoration-none text-white" href="/">
+                        <a
+                            href="/"
+                            class="d-flex align-items-center text-light text-decoration-none"
+                        >
                             <img
                                 src="/logo.png"
+                                height="40"
                                 style="
-                                    height: 1.5em;
-                                    margin-top: -0.5em;
-                                    vertical-align: text-bottom;
+                                    margin-top: -0.25em;
+                                    margin-right: 0.25em;
                                 "
                             />
-                            Tango
+                            <span class="fs-4">Tango</span>
                         </a>
                     </h3>
                     <nav
@@ -131,24 +151,27 @@
                             data-bs-toggle="dropdown"
                             aria-expanded="false"
                         >
-                            <i
-                                class="bi-translate me-1"
+                            <span
+                                class="material-symbols-outlined me-1"
                                 data-localize
                                 title="Language"
                                 lang="en"
-                            ></i>
-                            <i
-                                class="bi-translate me-1"
+                                >translate</span
+                            >
+                            <span
+                                class="material-symbols-outlined me-1"
                                 data-localize
                                 title="言語"
                                 lang="ja"
-                            ></i>
-                            <i
-                                class="bi-translate me-1"
+                                >translate</span
+                            >
+                            <span
+                                class="material-symbols-outlined me-1"
                                 data-localize
                                 title="语言"
                                 lang="zh"
-                            ></i>
+                                >translate</span
+                            >
                         </a>
                         <ul
                             class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
@@ -171,35 +194,33 @@
                             </li>
                         </ul>
                     </nav>
-                </div>
-            </header>
+                </header>
 
-            <main class="px-3">
-                <div class="container my-3">
-                    <h1>
-                        <span lang="en" data-localize>
-                            Battle Network rollback!
-                        </span>
-                        <span lang="ja" data-localize>
-                            EXEロールバックネットコード
-                        </span>
-                        <span lang="zh" data-localize
-                            >支持EXE的回滚网络代码
-                        </span>
-                    </h1>
-                    <p class="lead">
-                        <span lang="en" data-localize>
-                            Play Mega Man Battle Network online with rollback
-                            netplay.
-                        </span>
-                        <span lang="ja" data-localize>
-                            一緒に「ロックマンエグゼ」をロールバックネットプレイでオンラインプレイしましょう！
-                        </span>
-                        <span lang="zh" data-localize>
-                            使用回滚净码跟朋友一起在线玩《洛克人EXE》
-                        </span>
-                    </p>
-                    <div class="d-grid col-6 mx-auto">
+                <div class="p-5">
+                    <div class="container-fluid py-5">
+                        <h1 class="display-5 fw-bold">
+                            <span lang="en" data-localize>
+                                The new Mega Man Battle Network experience.
+                            </span>
+                            <span lang="ja" data-localize>
+                                ロックマンエグゼの新体験
+                            </span>
+                            <span lang="zh" data-localize>
+                                洛克人EXE的新体验
+                            </span>
+                        </h1>
+                        <p class="col-md-8 fs-4">
+                            <span lang="en" data-localize>
+                                Play Mega Man Battle Network online with
+                                rollback netplay.
+                            </span>
+                            <span lang="ja" data-localize>
+                                一緒に「ロックマンエグゼ」をロールバックネットプレイでオンラインプレイしましょう！
+                            </span>
+                            <span lang="zh" data-localize>
+                                使用回滚净码跟朋友一起在线玩《洛克人EXE》
+                            </span>
+                        </p>
                         <div class="btn-group">
                             <a
                                 href="https://github.com/tangobattle/tango/releases"
@@ -232,22 +253,21 @@
                             <button
                                 type="button"
                                 id="download-button-dropdown"
-                                class="btn btn-lg btn-secondary border-0 border-start border-dark dropdown-toggle dropdown-toggle-split flex-grow-0"
-                                style="background: #4caf50"
+                                class="btn btn-lg btn-secondary border-0 border-start border-dark dropdown-toggle dropdown-toggle-split flex-grow-0 bg-tango"
                                 disabled
                                 data-bs-toggle="dropdown"
                                 aria-expanded="false"
                             >
                                 <span class="visually-hidden">
-                                    <span lang="en" data-localize
-                                        >Toggle Dropdown</span
-                                    >
-                                    <span lang="ja" data-localize
-                                        >トグルドロップダウン</span
-                                    >
-                                    <span lang="zh" data-localize
-                                        >切换下拉菜单</span
-                                    >
+                                    <span lang="en" data-localize>
+                                        Toggle Dropdown
+                                    </span>
+                                    <span lang="ja" data-localize>
+                                        トグルドロップダウン
+                                    </span>
+                                    <span lang="zh" data-localize>
+                                        切换下拉菜单
+                                    </span>
                                 </span>
                             </button>
                             <ul
@@ -261,8 +281,8 @@
                                         ><i
                                             class="si si-windows me-1 align-middle"
                                         ></i>
-                                        Windows x64</a
-                                    >
+                                        Windows x64
+                                    </a>
                                     <a
                                         class="dropdown-item"
                                         id="linux-download-link"
@@ -270,70 +290,180 @@
                                         ><i
                                             class="si si-linux me-1 align-middle"
                                         ></i>
-                                        Linux x64</a
-                                    >
+                                        Linux x64
+                                    </a>
                                 </li>
                             </ul>
                         </div>
-                    </div>
-                    <script>
-                        function getOS() {
-                            if (
-                                window.navigator.userAgent.indexOf("Linux") !=
-                                -1
-                            ) {
-                                return "linux";
+                        <script>
+                            function getOS() {
+                                if (
+                                    window.navigator.userAgent.indexOf(
+                                        "Linux"
+                                    ) != -1
+                                ) {
+                                    return "linux";
+                                }
+                                return "windows";
                             }
-                            return "windows";
-                        }
-                        (async () => {
-                            const releases = await (
-                                await fetch(
-                                    "https://api.github.com/repos/tangobattle/tango/releases"
-                                )
-                            ).json();
-                            const latest = releases.find((r) => !r.prerelease);
+                            (async () => {
+                                const releases = await (
+                                    await fetch(
+                                        "https://api.github.com/repos/tangobattle/tango/releases"
+                                    )
+                                ).json();
+                                const latest = releases.find(
+                                    (r) => !r.prerelease
+                                );
 
-                            document.getElementById("spinner").style.display =
-                                "none";
-                            document.getElementById(
-                                "release-version"
-                            ).textContent = "v" + latest.name;
+                                document.getElementById(
+                                    "spinner"
+                                ).style.display = "none";
+                                document.getElementById(
+                                    "release-version"
+                                ).textContent = "v" + latest.name;
 
-                            const downloadUrls = {
-                                windows: latest.assets.find((a) =>
-                                    a.browser_download_url.endsWith(".exe")
-                                ).browser_download_url,
-                                linux: latest.assets.find((a) =>
-                                    a.browser_download_url.endsWith(".AppImage")
-                                ).browser_download_url,
-                            };
+                                const downloadUrls = {
+                                    windows: latest.assets.find((a) =>
+                                        a.browser_download_url.endsWith(".exe")
+                                    ).browser_download_url,
+                                    linux: latest.assets.find((a) =>
+                                        a.browser_download_url.endsWith(
+                                            ".AppImage"
+                                        )
+                                    ).browser_download_url,
+                                };
 
-                            document.getElementById(
-                                "download-button-dropdown"
-                            ).disabled = false;
+                                document.getElementById(
+                                    "download-button-dropdown"
+                                ).disabled = false;
 
-                            document.getElementById(
-                                "windows-download-link"
-                            ).href = downloadUrls.windows;
-                            document.getElementById(
-                                "linux-download-link"
-                            ).href = downloadUrls.linux;
+                                document.getElementById(
+                                    "windows-download-link"
+                                ).href = downloadUrls.windows;
+                                document.getElementById(
+                                    "linux-download-link"
+                                ).href = downloadUrls.linux;
 
-                            const os = getOS();
+                                const os = getOS();
 
-                            document
-                                .getElementById(`download-button-icon-${os}`)
-                                .classList.remove("d-none");
+                                document
+                                    .getElementById(
+                                        `download-button-icon-${os}`
+                                    )
+                                    .classList.remove("d-none");
 
-                            document.getElementById("download-button").href =
-                                downloadUrls[os];
-                        })();
-                    </script>
+                                document.getElementById(
+                                    "download-button"
+                                ).href = downloadUrls[os];
+                            })();
+                        </script>
+                    </div>
                 </div>
-            </main>
-
-            <footer class="mt-auto text-white-50">
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div class="col d-flex align-items-start">
+                        <div class="icon-square text-tango flex-shrink-0 me-3">
+                            <span class="material-symbols-outlined me-1"
+                                >sports_esports</span
+                            >
+                        </div>
+                        <div>
+                            <h4>
+                                <span lang="en" data-localize>
+                                    Extensive game support
+                                </span>
+                                <span lang="ja" data-localize>
+                                    多数作品対応可能
+                                </span>
+                                <span lang="zh" data-localize>
+                                    支持大量游戏
+                                </span>
+                            </h4>
+                            <p>
+                                <span lang="en" data-localize>
+                                    Supports all English and Japanese versions
+                                    of Battle Network 4 to 6.
+                                </span>
+                                <span lang="ja" data-localize>
+                                    エグゼ4～6までの英語版、日本語版に対応しています。
+                                </span>
+                                <span lang="zh" data-localize>
+                                    支持洛克人EXE4～6的英文版和日文版。
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div class="icon-square text-tango flex-shrink-0 me-3">
+                            <span class="material-symbols-outlined me-1"
+                                >sync</span
+                            >
+                        </div>
+                        <div>
+                            <h4>
+                                <span lang="en" data-localize>
+                                    Rollback netplay
+                                </span>
+                                <span lang="ja" data-localize>
+                                    ロールバックネットプレイ
+                                </span>
+                                <span lang="zh" data-localize>
+                                    回滚网络代码
+                                </span>
+                            </h4>
+                            <p>
+                                <span lang="en" data-localize>
+                                    Smooth netplay with minimal lag, no matter
+                                    the distance.
+                                </span>
+                                <span lang="ja" data-localize>
+                                    距離に関係なく、最小限のラグでプレイすることができます。
+                                </span>
+                                <span lang="zh" data-localize>
+                                    顺畅的网络游戏，无论距离多少。
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-start">
+                        <div
+                            class="icon-square bg-dark text-tango flex-shrink-0 me-3"
+                        >
+                            <span class="material-symbols-outlined me-1"
+                                >slow_motion_video</span
+                            >
+                        </div>
+                        <div>
+                            <h4>
+                                <span lang="en" data-localize>
+                                    Automatic replays
+                                </span>
+                                <span lang="ja" data-localize>
+                                    自動リプレイ録画
+                                </span>
+                                <span lang="zh" data-localize>
+                                    自动回放记录
+                                </span>
+                            </h4>
+                            <p>
+                                <span lang="en" data-localize>
+                                    Get automatic, accurate replays of all your
+                                    matches.
+                                </span>
+                                <span lang="ja" data-localize>
+                                    対戦を完璧な精度で自動的に記録します。
+                                </span>
+                                <span lang="zh" data-localize>
+                                    自动记录所有战斗的精确回放。
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="mt-auto text-muted">
+            <div class="container py-2">
                 <p>
                     <span lang="en" data-localize>
                         Mega Man Battle Network is a trademark of
@@ -366,7 +496,7 @@
                         的商标。Tango是粉丝项目，与CAPCOM无关。
                     </span>
                 </p>
-            </footer>
-        </div>
+            </div>
+        </footer>
     </body>
 </html>
