@@ -49,4 +49,4 @@ function initLangSelector(languages) {
     );
 }
 
-initLangSelector(["en", "ja", "zh"]);
+initLangSelector(["en", "ja", "zh", "es"]);
