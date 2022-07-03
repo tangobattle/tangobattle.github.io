@@ -232,185 +232,192 @@
 
                 <div class="py-md-5">
                     <div class="py-5 row">
-                        <div class="col">
-                            <h1>
-                                <span lang="en" data-localize>
-                                    The new Mega Man Battle Network experience.
-                                </span>
-                                <span lang="ja" data-localize>
-                                    ロックマンエグゼの新体験
-                                </span>
-                                <span lang="zh" data-localize>
-                                    洛克人EXE的新体验
-                                </span>
-                                <span lang="es" data-localize>
-                                    La nueva experiencia en Mega Man Battle
-                                    Network.
-                                </span>
-                            </h1>
-                            <p class="lead">
-                                <span lang="en" data-localize>
-                                    Play Mega Man Battle Network online with
-                                    rollback netcode.
-                                </span>
-                                <span lang="ja" data-localize>
-                                    一緒に「ロックマンエグゼ」をロールバックネットコードでオンラインプレイしましょう！
-                                </span>
-                                <span lang="zh" data-localize>
-                                    使用回滚净码跟朋友一起《洛克人EXE》网络对战！
-                                </span>
-                                <span lang="es" data-localize>
-                                    Juega Mega Man Battle Network online usando
-                                    netcode rollback.
-                                </span>
-                            </p>
-                            <div class="btn-group">
-                                <a
-                                    href="https://github.com/tangobattle/tango/releases/latest"
-                                    id="download-button"
-                                    class="btn btn-lg btn-secondary border-0 fw-bold"
-                                    style="background: #4caf50"
-                                    target="_blank"
-                                >
-                                    <i
-                                        class="si si-windows me-1 align-middle d-none"
-                                        id="download-button-icon-windows"
-                                    ></i>
-                                    <i
-                                        class="si si-linux me-1 align-middle d-none"
-                                        id="download-button-icon-linux"
-                                    ></i>
-                                    <span lang="en" data-localize
-                                        >Download</span
-                                    >
-                                    <span lang="ja" data-localize
-                                        >ダウンロード</span
-                                    >
-                                    <span lang="zh" data-localize>下载</span>
-                                    <span lang="es" data-localize
-                                        >Descargar</span
-                                    >
-                                    <span
-                                        id="spinner"
-                                        class="spinner-border spinner-border-sm"
-                                        role="status"
-                                        aria-hidden="true"
-                                    ></span>
-                                    <small id="release-version"></small>
-                                </a>
-                                <button
-                                    type="button"
-                                    id="download-button-dropdown"
-                                    class="btn btn-lg btn-secondary border-0 border-start border-dark dropdown-toggle dropdown-toggle-split flex-grow-0 bg-tango"
-                                    disabled
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                >
-                                    <span class="visually-hidden">
-                                        <span lang="en" data-localize>
-                                            Toggle Dropdown
-                                        </span>
-                                        <span lang="ja" data-localize>
-                                            トグルドロップダウン
-                                        </span>
-                                        <span lang="zh" data-localize>
-                                            切换下拉菜单
-                                        </span>
-                                        <span lang="es" data-localize>
-                                            Usar Dropdown
-                                        </span>
+                        <div
+                            class="col d-flex align-items-center justify-content-center"
+                        >
+                            <div>
+                                <h1>
+                                    <span lang="en" data-localize>
+                                        The new Mega Man Battle Network
+                                        experience.
                                     </span>
-                                </button>
-                                <ul
-                                    class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
-                                >
-                                    <li>
-                                        <a
-                                            class="dropdown-item"
-                                            id="windows-download-link"
-                                            href="https://github.com/tangobattle/tango/releases/latest"
-                                            ><i
-                                                class="si si-windows me-1 align-middle"
-                                            ></i>
-                                            Windows x64
-                                        </a>
-                                        <a
-                                            class="dropdown-item"
-                                            id="linux-download-link"
-                                            href="https://github.com/tangobattle/tango/releases/latest"
-                                            ><i
-                                                class="si si-linux me-1 align-middle"
-                                            ></i>
-                                            Linux x64
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <script>
-                                function getOS() {
-                                    if (
-                                        window.navigator.userAgent.indexOf(
-                                            "Linux"
-                                        ) != -1
-                                    ) {
-                                        return "linux";
+                                    <span lang="ja" data-localize>
+                                        ロックマンエグゼの新体験
+                                    </span>
+                                    <span lang="zh" data-localize>
+                                        洛克人EXE的新体验
+                                    </span>
+                                    <span lang="es" data-localize>
+                                        La nueva experiencia en Mega Man Battle
+                                        Network.
+                                    </span>
+                                </h1>
+                                <p class="lead">
+                                    <span lang="en" data-localize>
+                                        Play Mega Man Battle Network online with
+                                        rollback netcode.
+                                    </span>
+                                    <span lang="ja" data-localize>
+                                        一緒に「ロックマンエグゼ」をロールバックネットコードでオンラインプレイしましょう！
+                                    </span>
+                                    <span lang="zh" data-localize>
+                                        使用回滚净码跟朋友一起《洛克人EXE》网络对战！
+                                    </span>
+                                    <span lang="es" data-localize>
+                                        Juega Mega Man Battle Network online
+                                        usando netcode rollback.
+                                    </span>
+                                </p>
+                                <div class="btn-group">
+                                    <a
+                                        href="https://github.com/tangobattle/tango/releases/latest"
+                                        id="download-button"
+                                        class="btn btn-lg btn-secondary border-0 fw-bold"
+                                        style="background: #4caf50"
+                                        target="_blank"
+                                    >
+                                        <i
+                                            class="si si-windows me-1 align-middle d-none"
+                                            id="download-button-icon-windows"
+                                        ></i>
+                                        <i
+                                            class="si si-linux me-1 align-middle d-none"
+                                            id="download-button-icon-linux"
+                                        ></i>
+                                        <span lang="en" data-localize
+                                            >Download</span
+                                        >
+                                        <span lang="ja" data-localize
+                                            >ダウンロード</span
+                                        >
+                                        <span lang="zh" data-localize
+                                            >下载</span
+                                        >
+                                        <span lang="es" data-localize
+                                            >Descargar</span
+                                        >
+                                        <span
+                                            id="spinner"
+                                            class="spinner-border spinner-border-sm"
+                                            role="status"
+                                            aria-hidden="true"
+                                        ></span>
+                                        <small id="release-version"></small>
+                                    </a>
+                                    <button
+                                        type="button"
+                                        id="download-button-dropdown"
+                                        class="btn btn-lg btn-secondary border-0 border-start border-dark dropdown-toggle dropdown-toggle-split flex-grow-0 bg-tango"
+                                        disabled
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false"
+                                    >
+                                        <span class="visually-hidden">
+                                            <span lang="en" data-localize>
+                                                Toggle Dropdown
+                                            </span>
+                                            <span lang="ja" data-localize>
+                                                トグルドロップダウン
+                                            </span>
+                                            <span lang="zh" data-localize>
+                                                切换下拉菜单
+                                            </span>
+                                            <span lang="es" data-localize>
+                                                Usar Dropdown
+                                            </span>
+                                        </span>
+                                    </button>
+                                    <ul
+                                        class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                                    >
+                                        <li>
+                                            <a
+                                                class="dropdown-item"
+                                                id="windows-download-link"
+                                                href="https://github.com/tangobattle/tango/releases/latest"
+                                                ><i
+                                                    class="si si-windows me-1 align-middle"
+                                                ></i>
+                                                Windows x64
+                                            </a>
+                                            <a
+                                                class="dropdown-item"
+                                                id="linux-download-link"
+                                                href="https://github.com/tangobattle/tango/releases/latest"
+                                                ><i
+                                                    class="si si-linux me-1 align-middle"
+                                                ></i>
+                                                Linux x64
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <script>
+                                    function getOS() {
+                                        if (
+                                            window.navigator.userAgent.indexOf(
+                                                "Linux"
+                                            ) != -1
+                                        ) {
+                                            return "linux";
+                                        }
+                                        return "windows";
                                     }
-                                    return "windows";
-                                }
-                                (async () => {
-                                    const releases = await (
-                                        await fetch(
-                                            "https://api.github.com/repos/tangobattle/tango/releases"
-                                        )
-                                    ).json();
-                                    const latest = releases.find(
-                                        (r) => !r.prerelease
-                                    );
-
-                                    document.getElementById(
-                                        "spinner"
-                                    ).style.display = "none";
-                                    document.getElementById(
-                                        "release-version"
-                                    ).textContent = "v" + latest.name;
-
-                                    const downloadUrls = {
-                                        windows: latest.assets.find((a) =>
-                                            a.browser_download_url.endsWith(
-                                                ".exe"
+                                    (async () => {
+                                        const releases = await (
+                                            await fetch(
+                                                "https://api.github.com/repos/tangobattle/tango/releases"
                                             )
-                                        ).browser_download_url,
-                                        linux: latest.assets.find((a) =>
-                                            a.browser_download_url.endsWith(
-                                                ".AppImage"
+                                        ).json();
+                                        const latest = releases.find(
+                                            (r) => !r.prerelease
+                                        );
+
+                                        document.getElementById(
+                                            "spinner"
+                                        ).style.display = "none";
+                                        document.getElementById(
+                                            "release-version"
+                                        ).textContent = "v" + latest.name;
+
+                                        const downloadUrls = {
+                                            windows: latest.assets.find((a) =>
+                                                a.browser_download_url.endsWith(
+                                                    ".exe"
+                                                )
+                                            ).browser_download_url,
+                                            linux: latest.assets.find((a) =>
+                                                a.browser_download_url.endsWith(
+                                                    ".AppImage"
+                                                )
+                                            ).browser_download_url,
+                                        };
+
+                                        document.getElementById(
+                                            "download-button-dropdown"
+                                        ).disabled = false;
+
+                                        document.getElementById(
+                                            "windows-download-link"
+                                        ).href = downloadUrls.windows;
+                                        document.getElementById(
+                                            "linux-download-link"
+                                        ).href = downloadUrls.linux;
+
+                                        const os = getOS();
+
+                                        document
+                                            .getElementById(
+                                                `download-button-icon-${os}`
                                             )
-                                        ).browser_download_url,
-                                    };
+                                            .classList.remove("d-none");
 
-                                    document.getElementById(
-                                        "download-button-dropdown"
-                                    ).disabled = false;
-
-                                    document.getElementById(
-                                        "windows-download-link"
-                                    ).href = downloadUrls.windows;
-                                    document.getElementById(
-                                        "linux-download-link"
-                                    ).href = downloadUrls.linux;
-
-                                    const os = getOS();
-
-                                    document
-                                        .getElementById(
-                                            `download-button-icon-${os}`
-                                        )
-                                        .classList.remove("d-none");
-
-                                    document.getElementById(
-                                        "download-button"
-                                    ).href = downloadUrls[os];
-                                })();
-                            </script>
+                                        document.getElementById(
+                                            "download-button"
+                                        ).href = downloadUrls[os];
+                                    })();
+                                </script>
+                            </div>
                         </div>
                         <div
                             class="col-4 d-none d-lg-flex align-items-center justify-content-center"
