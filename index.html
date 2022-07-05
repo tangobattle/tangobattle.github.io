@@ -26,6 +26,21 @@
             crossorigin="anonymous"
         ></script>
         <style>
+            @font-face {
+                font-family: "DFPShaoNvW5-GB";
+                src: url(fonts/DFPShaoNvW5.ttf);
+            }
+
+            @font-face {
+                font-family: "Comic Sans MS";
+                src: url(fonts/COMIC.ttf);
+            }
+
+            @font-face {
+                font-family: HGPSoeiKakupoptai;
+                src: url(fonts/HGRPP1.ttf);
+            }
+
             .btn-secondary,
             .btn-secondary:hover,
             .btn-secondary:focus {
@@ -54,6 +69,14 @@
                 background-size: 640px 640px;
                 max-width: 1080px;
                 font-family: "Comic Sans MS", sans-serif;
+            }
+
+            [lang="ja"]:not([class^="material-symbols-"]) {
+                font-family: "HGPSoeiKakupoptai", sans-serif;
+            }
+
+            [lang="zh"]:not([class^="material-symbols-"]) {
+                font-family: "DFPShaoNvW5-GB", sans-serif;
             }
 
             .nav-masthead .nav-link {
