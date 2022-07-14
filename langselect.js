@@ -36,11 +36,25 @@ function initLangSelector(languages) {
 
             // 3. Check navigator language.
             if (!currentLanguage) {
-                currentLanguage = navigator.language.split(/-/)[0];
+                currentLanguage = navigator.language;
             }
 
-            currentLanguage = currentLanguage || languages[0];
-            if (languages.indexOf(currentLanguage) == -1) {
+            let locale = null;
+            try {
+                locale = new Intl.Locale(
+                    currentLanguage || languages[0]
+                ).maximize();
+            } catch (e) {
+                currentLanguage = languages[0];
+            }
+
+            if (locale != null) {
+                currentLanguage = languages.find((lang) =>
+                    locale.baseName.startsWith(lang)
+                );
+            }
+
+            if (currentLanguage == null) {
                 currentLanguage = languages[0];
             }
 
@@ -49,4 +63,4 @@ function initLangSelector(languages) {
     );
 }
 
-initLangSelector(["en", "ja", "zh", "es"]);
+initLangSelector(["en", "ja", "zh-Hans", "es"]);
