@@ -279,6 +279,11 @@
                                             id="download-button-icon-linux"
                                             class="d-none"
                                         />
+                                        <img
+                                            src="/icons/mac.png"
+                                            id="download-button-icon-mac"
+                                            class="d-none"
+                                        />
                                         <span lang="en" data-localize
                                             >Download</span
                                         >
@@ -342,6 +347,14 @@
                                                 <img src="/icons/linux.png" />
                                                 Linux x64
                                             </a>
+                                            <a
+                                                class="dropdown-item"
+                                                id="mac-download-link"
+                                                href="https://github.com/tangobattle/tango/releases/latest"
+                                            >
+                                                <img src="/icons/mac.png" />
+                                                macOS x64
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>
@@ -354,6 +367,15 @@
                                         ) {
                                             return "linux";
                                         }
+
+                                        if (
+                                            window.navigator.userAgent.indexOf(
+                                                "Mac"
+                                            ) != -1
+                                        ) {
+                                            return "mac";
+                                        }
+
                                         return "windows";
                                     }
                                     (async () => {
@@ -376,12 +398,17 @@
                                         const downloadUrls = {
                                             windows: latest.assets.find((a) =>
                                                 a.browser_download_url.endsWith(
-                                                    ".exe"
+                                                    "-win-x64.exe"
                                                 )
                                             ).browser_download_url,
                                             linux: latest.assets.find((a) =>
                                                 a.browser_download_url.endsWith(
-                                                    ".AppImage"
+                                                    "-linux-x86_64.AppImage"
+                                                )
+                                            ).browser_download_url,
+                                            mac: latest.assets.find((a) =>
+                                                a.browser_download_url.endsWith(
+                                                    "-mac-x64.dmg"
                                                 )
                                             ).browser_download_url,
                                         };
@@ -396,6 +423,9 @@
                                         document.getElementById(
                                             "linux-download-link"
                                         ).href = downloadUrls.linux;
+                                        document.getElementById(
+                                            "mac-download-link"
+                                        ).href = downloadUrls.mac;
 
                                         const os = getOS();
 
