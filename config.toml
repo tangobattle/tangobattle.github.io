@@ -1,7 +1,6 @@
 base_url = "https://tango.n1gp.net"
 
 [languages.en.translations]
-menu-home = "Home"
 menu-blog = "Blog"
 menu-status = "Status"
 menu-language = "Language"
@@ -22,7 +21,6 @@ home-panel-4-description = "Play online with your favorite custom patches."
 footer = 'Mega Man Battle Network is a trademark of <a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>. Tango is a fan project and is not affiliated with, funded, or in any way associated with Capcom.'
 
 [languages.ja.translations]
-menu-home = "ホーム"
 menu-blog = "ブログ"
 menu-status = "ステータス"
 menu-language = "言語"
@@ -43,7 +41,6 @@ home-panel-4-description = "カスタムパッチでオンラインプレイで�
 footer = '「ロックマンエグゼ」は<a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>の商標です。Tangoはファンプロジェクトであり、CAPCOMとは一切関係ありません。'
 
 [languages.zh-CN.translations]
-menu-home = "主页"
 menu-blog = "博客"
 menu-status = "状态"
 menu-language = "语言"
@@ -64,7 +61,6 @@ home-panel-4-description = "用你的自定义补丁进行在线游玩。"
 footer = '《洛克人EXE》是<a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>的商标。Tango是粉丝项目，与CAPCOM无关。'
 
 [languages.es.translations]
-menu-home = "Home"
 menu-blog = "Blog"
 menu-status = "Estado"
 menu-language = "Lenguaje"
