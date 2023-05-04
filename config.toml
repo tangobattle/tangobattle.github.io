@@ -1,0 +1,85 @@
+base_url = "https://tango.n1gp.net"
+
+[languages.en.translations]
+menu-home = "Home"
+menu-blog = "Blog"
+menu-status = "Status"
+menu-language = "Language"
+home-tagline = "The old new Mega Man Battle Network experience."
+home-lead = "Play Mega Man Battle Network online with rollback netcode."
+home-download-button = "Download"
+home-download-button-toggle-dropdown = "Toggle dropdown"
+home-download-notice = 'You must have a copy of either <a href="https://store.steampowered.com/sub/821963/?l=english" target="_blank">Mega Man Battle Network Legacy Collection</a> on Steam or otherwise legally obtained ROMs. The Tango developers <strong>do not condone piracy of any kind</strong>.'
+home-post-download-cta = "… then, join a community below to start playing!"
+home-panel-1-title = "Supports all games"
+home-panel-1-description = "Works with every English and Japanese Battle Network game."
+home-panel-2-title = "Rollback netcode"
+home-panel-2-description = "Smooth netplay with minimal lag, no matter the distance."
+home-panel-3-title = "Automatic replays"
+home-panel-3-description = "Get automatic, accurate replays of all your matches."
+home-panel-4-title = "Automatic ROM patching"
+home-panel-4-description = "Play online with your favorite custom patches."
+footer = 'Mega Man Battle Network is a trademark of <a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>. Tango is a fan project and is not affiliated with, funded, or in any way associated with Capcom.'
+
+[languages.ja.translations]
+menu-home = "ホーム"
+menu-blog = "ブログ"
+menu-status = "ステータス"
+menu-language = "言語"
+home-tagline = "ロックマンエグゼの古新体験"
+home-lead = "一緒に「ロックマンエグゼ」をロールバックネットコードでオンラインプレイしましょう！"
+home-download-button = "ダウンロード"
+home-download-button-toggle-dropdown = "トグルドロップダウン"
+home-download-notice = 'Steamからの「<a href="https://store.steampowered.com/sub/821963/?l=japanese" target="_blank">ロックマンエグゼ アドバンスドコレクション</a>」か、合法的に引きしたROMを持ちであることが条件です。Tangoの開発者は、いかなる種類の著作権侵害も<strong>絶対容認していません</strong>。'
+home-post-download-cta = "次に、以下のいずれかのコミュニティへ参加してプレイを始めましょう!"
+home-panel-1-title = "全部作品対応可能"
+home-panel-1-description = "英語と日本語のすべてのエグゼ作品に対応しています。"
+home-panel-2-title = "ロールバックネットコード"
+home-panel-2-description = "距離に関係なく、最小限のラグでプレイすることができます。"
+home-panel-3-title = "自動リプレイ録画"
+home-panel-3-description = "対戦を完璧な精度で自動的に記録します。"
+home-panel-4-title = "自動ROMパッチ"
+home-panel-4-description = "カスタムパッチでオンラインプレイできます。"
+footer = '「ロックマンエグゼ」は<a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>の商標です。Tangoはファンプロジェクトであり、CAPCOMとは一切関係ありません。'
+
+[languages.zh-CN.translations]
+menu-home = "主页"
+menu-blog = "博客"
+menu-status = "状态"
+menu-language = "语言"
+home-tagline = "洛克人EXE的旧新体验"
+home-lead = "使用回滚净码跟朋友一起《洛克人EXE》网络对战！"
+home-download-button = "下载"
+home-download-button-toggle-dropdown = "切换下拉菜单"
+home-download-notice = '你必须有Steam上的《<a href="https://store.steampowered.com/sub/821963/?l=schinese" target="_blank">ROCKMAN EXE 合集</a>》或其他合法获得的ROM。Tango的开发者<strong>不容忍任何形式的盗版行为</strong>。'
+home-post-download-cta = "然后，加入以下任何的群开始玩！"
+home-panel-1-title = "支持所有EXE游戏"
+home-panel-1-description = "支持所有英文版和日文版的洛克人EXE游戏。"
+home-panel-2-title = "回滚网络代码"
+home-panel-2-description = "顺畅的网络游戏，无论距离多少。"
+home-panel-3-title = "自动回放记录"
+home-panel-3-description = "自动记录所有战斗的精确回放。"
+home-panel-4-title = "自动ROM补丁"
+home-panel-4-description = "用你的自定义补丁进行在线游玩。"
+footer = '《洛克人EXE》是<a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>的商标。Tango是粉丝项目，与CAPCOM无关。'
+
+[languages.es.translations]
+menu-home = "Home"
+menu-blog = "Blog"
+menu-status = "Estado"
+menu-language = "Lenguaje"
+home-tagline = "La vieja nueva experiencia en Mega Man Battle Network."
+home-lead = "Juega Mega Man Battle Network online usando netcode rollback."
+home-download-button = "Descargar"
+home-download-button-toggle-dropdown = "Usar dropdown"
+home-download-notice = '<a href="https://store.steampowered.com/sub/821963/?l=spanish" target="_blank">Mega Man Battle Network Legacy Collection</a> en Steam o bien ROMs obtenidas legalmente. Los desarrolladores de Tango <strong>no aprueban ningún tipo de piratería</strong>.'
+home-post-download-cta = "… entonces, ¡únete a una comunidad a continuación para empezar a jugar!"
+home-panel-1-title = "Soporte para todos los juegos"
+home-panel-1-description = "Soporta todos los juegos de la Battle Network inglesa y japonesa."
+home-panel-2-title = "Netcode con Rollback"
+home-panel-2-description = "Suave experiencia de juego, con lag minimo, sin importar la distancia."
+home-panel-3-title = "Repeticiones automaticas"
+home-panel-3-description = "Obten repeticiones automaticas y precisas de todas tus partidas."
+home-panel-4-title = "Parchado de ROMs automatico"
+home-panel-4-description = "Juega en linea usando tus parches favoritos."
+footer = 'Mega Man Battle Network es una marca registrada de <a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>. Tango es un proyecto de fans y no se encuentra afiliado, financiado o asociado a Capcom de ninguna forma.'

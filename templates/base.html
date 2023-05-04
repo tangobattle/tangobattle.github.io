@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html class="h-100" lang="{{lang}}">
+    <head>
+        <meta charset="utf-8" />
+        <title>Tango</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/bootstrap.min.css" rel="stylesheet" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/simple-icons-font@v5/font/simple-icons.min.css"
+            type="text/css"
+        />
+        <link rel="icon" href="/favicon.png" />
+        <link rel="canonical" href="https://tango.n1gp.net" />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+
+        <meta
+            name="description"
+            content="{{trans(key='home-lead', lang=lang)}}"
+        />
+
+        <meta property="og:url" content="https://tango.n1gp.net/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Tango" />
+        <meta
+            property="og:description"
+            content="{{trans(key='home-lead', lang=lang)}}"
+        />
+        <meta property="og:image" content="https://tango.n1gp.net/card.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="tango.n1gp.net" />
+        <meta property="twitter:url" content="https://tango.n1gp.net/" />
+        <meta name="twitter:title" content="Tango" />
+        <meta
+            name="twitter:description"
+            content="{{trans(key='home-lead', lang=lang)}}"
+        />
+        <meta name="twitter:image" content="https://tango.n1gp.net/card.png" />
+
+        <script src="/bootstrap.bundle.min.js"></script>
+        <style>
+            img {
+                image-rendering: pixelated;
+            }
+
+            .icon-square {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                margin-top: -0.5rem;
+            }
+
+            body {
+                background: url("background.png") no-repeat bottom -40px right -40px;
+                background-size: 640px 640px;
+                max-width: 1080px;
+            }
+
+            .list-inline-separators .list-inline-item::after {
+                font-family: sans-serif;
+                content: "·";
+                margin-left: 0.5rem;
+            }
+
+            .list-inline-separators .list-inline-item:last-child::after {
+                display: none;
+            }
+
+            .nav-masthead .nav-link {
+                padding: 0.25rem 0;
+                font-weight: 700;
+                color: rgba(255, 255, 255, 0.5);
+                background-color: transparent;
+                border-bottom: 0.25rem solid transparent;
+            }
+
+            .nav-masthead .nav-link:hover,
+            .nav-masthead .nav-link:focus {
+                border-bottom-color: rgba(255, 255, 255, 0.25);
+            }
+
+            .nav-masthead .nav-link + .nav-link {
+                margin-left: 1rem;
+            }
+
+            .nav-masthead .active {
+                color: #fff;
+                border-bottom-color: #fff;
+            }
+
+            .material-symbols-outlined {
+                font-weight: inherit !important;
+                font-size: inherit !important;
+                line-height: inherit !important;
+                font-variation-settings: "FILL" 1, "GRAD" 200, "opsz" 32;
+            }
+
+            #screenshots {
+                width: 480px;
+                overflow: hidden;
+            }
+
+            #screenshots img {
+                image-rendering: pixelated;
+            }
+        </style>
+    </head>
+    <body class="bg-dark text-light d-flex flex-column h-100 mx-auto px-2">
+        <main class="flex-shrink-0">
+            <div class="container py-4">
+                <header class="pb-3 mb-4">
+                    <h3
+                        class="float-md-start mb-0 d-flex justify-content-center"
+                    >
+                        <a
+                            href="/"
+                            class="d-flex align-items-center text-light text-decoration-none"
+                        >
+                            <img src="/logo.gif" height="40" class="me-2" />
+                            <span class="fs-4">Tango</span>
+                        </a>
+                    </h3>
+                    <nav
+                        class="nav nav-masthead justify-content-center float-md-end"
+                    >
+                        <a class="nav-link active" aria-current="page" href="/">
+                            {{trans(key='menu-home', lang=lang)}}
+                        </a>
+                        <a
+                            class="nav-link"
+                            href="https://tangobattle.substack.com"
+                            target="_blank"
+                        >
+                            {{trans(key='menu-blog', lang=lang)}}
+                        </a>
+                        <a
+                            class="nav-link"
+                            href="https://tangobattle.betteruptime.com"
+                            target="_blank"
+                        >
+                            {{trans(key='menu-status', lang=lang)}}
+                        </a>
+                        <a
+                            class="nav-link"
+                            href="https://discord.n1gp.net"
+                            target="_blank"
+                            title="Discord"
+                            ><i
+                                class="si si-discord align-top d-inline-block me-1"
+                            ></i>
+                        </a>
+                        <a
+                            class="nav-link"
+                            href="https://github.com/tangobattle"
+                            target="_blank"
+                            title="GitHub"
+                            ><i
+                                class="si si-github align-top d-inline-block me-1"
+                            ></i>
+                        </a>
+                        <a
+                            class="nav-link"
+                            href="https://crwd.in/tangobattle"
+                            target="_blank"
+                            title="Crowdin"
+                            ><i
+                                class="si si-crowdin align-top d-inline-block me-1"
+                            ></i>
+                        </a>
+                        <a
+                            class="nav-link"
+                            href="https://twitter.com/tangobattle"
+                            target="_blank"
+                            title="Twitter"
+                            ><i
+                                class="si si-twitter align-top d-inline-block me-1"
+                            ></i>
+                        </a>
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="language-menu-link"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            title="{{trans(key='menu-language', lang=lang)}}"
+                        >
+                            <span class="material-symbols-outlined me-1"
+                                >translate</span
+                            >
+                        </a>
+                        <ul
+                            class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                            aria-labelledby="language-menu-link"
+                        >
+                            <li lang="en">
+                                <a class="dropdown-item" href="/">English</a>
+                            </li>
+                            <li lang="ja">
+                                <a class="dropdown-item" href="/ja">日本語</a>
+                            </li>
+                            <li lang="zh-Hans">
+                                <a class="dropdown-item" href="/zh-CN"
+                                    >简体中文</a
+                                >
+                            </li>
+                            <li lang="es">
+                                <a class="dropdown-item" href="/es">Español</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+        <footer class="mt-auto text-muted">
+            <div class="container py-2">
+                <p>{{trans(key='footer', lang=lang)|safe}}</p>
+            </div>
+        </footer>
+    </body>
+</html>

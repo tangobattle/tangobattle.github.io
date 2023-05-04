@@ -1,0 +1,286 @@
+{% extends "base.html" %} {% block content %}
+<div class="py-md-5">
+    <div class="py-5 row">
+        <div class="col d-flex align-items-center">
+            <div>
+                <div>
+                    <h1>{{trans(key='home-tagline', lang=lang)}}</h1>
+                    <p class="lead">{{trans(key='home-lead', lang=lang)}}</p>
+                    <div class="btn-group mb-3">
+                        <a
+                            href="https://github.com/tangobattle/tango/releases/latest"
+                            id="download-button"
+                            class="btn btn-primary fw-bold text-dark"
+                            target="_blank"
+                        >
+                            <i
+                                id="download-button-icon-windows"
+                                class="si si-windows align-top d-inline-block me-1 d-none"
+                            ></i>
+                            <i
+                                id="download-button-icon-linux"
+                                class="si si-linux align-top d-inline-block me-1 d-none"
+                            ></i>
+                            <i
+                                id="download-button-icon-mac"
+                                class="si si-apple align-top d-inline-block me-1 d-none"
+                            ></i>
+                            {{trans(key='home-download-button', lang=lang)}}
+                            <span
+                                id="spinner"
+                                class="spinner-border spinner-border-sm"
+                                role="status"
+                                aria-hidden="true"
+                            ></span>
+                            <small id="release-version"></small>
+                        </a>
+                        <button
+                            type="button"
+                            id="download-button-dropdown"
+                            class="btn btn-primary dropdown-toggle dropdown-toggle-split flex-grow-0 text-dark"
+                            disabled
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            <span class="visually-hidden">
+                                {{trans(key='home-download-button-toggle-dropdown',
+                                lang=lang)}}
+                            </span>
+                        </button>
+                        <ul
+                            class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                        >
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    id="windows-download-link"
+                                    href="https://github.com/tangobattle/tango/releases/latest"
+                                >
+                                    <i
+                                        class="si si-windows align-top d-inline-block me-1"
+                                    ></i>
+                                    Windows x64
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    id="linux-download-link"
+                                    href="https://github.com/tangobattle/tango/releases/latest"
+                                >
+                                    <i
+                                        class="si si-linux align-top d-inline-block me-1"
+                                    ></i>
+                                    Linux x64
+                                </a>
+                                <a
+                                    class="dropdown-item"
+                                    id="mac-download-link"
+                                    href="https://github.com/tangobattle/tango/releases/latest"
+                                >
+                                    <i
+                                        class="si si-apple align-top d-inline-block me-1"
+                                    ></i>
+                                    macOS Universal
+                                </a>
+                            </li>
+                        </ul>
+                        <script>
+                            function getOS() {
+                                if (
+                                    window.navigator.userAgent.indexOf(
+                                        "Linux"
+                                    ) != -1
+                                ) {
+                                    return "linux";
+                                }
+
+                                if (
+                                    window.navigator.userAgent.indexOf("Mac") !=
+                                    -1
+                                ) {
+                                    return "mac";
+                                }
+
+                                return "windows";
+                            }
+                            (async () => {
+                                const releases = await (
+                                    await fetch(
+                                        "https://api.github.com/repos/tangobattle/tango/releases"
+                                    )
+                                ).json();
+                                const latest = releases.find(
+                                    (r) => !r.prerelease
+                                );
+
+                                document.getElementById(
+                                    "spinner"
+                                ).style.display = "none";
+                                document.getElementById(
+                                    "release-version"
+                                ).textContent = latest.name || latest.tag_name;
+
+                                const safeDownloadURL = `https://github.com/tangobattle/tango/releases/tag/${latest.tag_name}`;
+
+                                const downloadUrls = {
+                                    windows: latest.assets.find((a) =>
+                                        a.browser_download_url.endsWith(
+                                            "-x86_64-windows.exe"
+                                        )
+                                    )?.browser_download_url,
+                                    linux: latest.assets.find((a) =>
+                                        a.browser_download_url.endsWith(
+                                            "-x86_64-linux.AppImage"
+                                        )
+                                    )?.browser_download_url,
+                                    mac: latest.assets.find((a) =>
+                                        a.browser_download_url.endsWith(
+                                            "-macos.dmg"
+                                        )
+                                    )?.browser_download_url,
+                                };
+
+                                document.getElementById(
+                                    "download-button-dropdown"
+                                ).disabled = false;
+
+                                document.getElementById(
+                                    "windows-download-link"
+                                ).href =
+                                    downloadUrls.windows ?? safeDownloadURL;
+                                document.getElementById(
+                                    "linux-download-link"
+                                ).href = downloadUrls.linux ?? safeDownloadURL;
+                                document.getElementById(
+                                    "mac-download-link"
+                                ).href = downloadUrls.mac ?? safeDownloadURL;
+
+                                const os = getOS();
+
+                                document
+                                    .getElementById(
+                                        `download-button-icon-${os}`
+                                    )
+                                    .classList.remove("d-none");
+
+                                document.getElementById(
+                                    "download-button"
+                                ).href = downloadUrls[os] ?? safeDownloadURL;
+                            })();
+                        </script>
+                    </div>
+                </div>
+                <p class="text-muted">
+                    {{trans(key='home-download-notice', lang=lang)|safe}}
+                </p>
+                <div>
+                    <p>
+                        {{trans(key='home-post-download-cta', lang=lang)|safe}}
+                    </p>
+                    <ul class="list-inline list-inline-separators">
+                        <li class="list-inline-item" lang="en">
+                            <a href="https://discord.n1gp.net" target="_blank"
+                                >N1GP</a
+                            >
+                            (English)
+                        </li>
+                        <li class="list-inline-item" lang="ja">
+                            <a
+                                href="https://discord.gg/amYCtbJK"
+                                target="_blank"
+                                >EXE Hello Hello Mango Coconut</a
+                            >（日本語）
+                        </li>
+                        <li class="list-inline-item" lang="es">
+                            <a href="https://discord.gg/cKgTcvz" target="_blank"
+                                >Net Saviors</a
+                            >
+                            (Español)
+                        </li>
+                        <li class="list-inline-item" lang="zh-Hans">
+                            <a
+                                href="https://jq.qq.com/?_wv=1027&k=we2L9Epb"
+                                target="_blank"
+                                >QQ群310432370：洛克人EXE对战大会</a
+                            >（中文）
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div
+            class="col-5 d-none d-lg-flex align-items-center justify-content-center"
+        >
+            <div
+                id="screenshots"
+                class="carousel slide"
+                data-bs-touch="false"
+                data-bs-ride="carousel"
+            >
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="slides/6.png" class="d-block w-100" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slides/5.png" class="d-block w-100" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slides/4.png" class="d-block w-100" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slides/45.png" class="d-block w-100" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slides/3.png" class="d-block w-100" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slides/2.png" class="d-block w-100" />
+                    </div>
+                    <div class="carousel-item">
+                        <img src="slides/1.png" class="d-block w-100" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+    <div class="col d-flex align-items-start">
+        <div class="icon-square flex-shrink-0 me-3 text-primary">
+            <span class="material-symbols-outlined me-1">sports_esports</span>
+        </div>
+        <div>
+            <h4>{{trans(key='home-panel-1-title', lang=lang)}}</h4>
+            <p>{{trans(key='home-panel-1-description', lang=lang)}}</p>
+        </div>
+    </div>
+    <div class="col d-flex align-items-start">
+        <div class="icon-square flex-shrink-0 me-3 text-primary">
+            <span class="material-symbols-outlined me-1">sync</span>
+        </div>
+        <div>
+            <h4>{{trans(key='home-panel-2-title', lang=lang)}}</h4>
+            <p>{{trans(key='home-panel-2-description', lang=lang)}}</p>
+        </div>
+    </div>
+    <div class="col d-flex align-items-start">
+        <div class="icon-square bg-dark flex-shrink-0 me-3 text-primary">
+            <span class="material-symbols-outlined me-1"
+                >slow_motion_video</span
+            >
+        </div>
+        <div>
+            <h4>{{trans(key='home-panel-3-title', lang=lang)}}</h4>
+            <p>{{trans(key='home-panel-3-description', lang=lang)}}</p>
+        </div>
+    </div>
+    <div class="col d-flex align-items-start">
+        <div class="icon-square bg-dark flex-shrink-0 me-3 text-primary">
+            <span class="material-symbols-outlined me-1">healing</span>
+        </div>
+        <div>
+            <h4>{{trans(key='home-panel-4-title', lang=lang)}}</h4>
+            <p>{{trans(key='home-panel-4-description', lang=lang)}}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
