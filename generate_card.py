@@ -26,7 +26,7 @@ def wrap_text(
             lines[-1] = word
             curr_line_width = word_width
         else:
-            new_line_width = font.getlength(f"{lines[-1]}{word}", direction)
+            new_line_width = font.getlength(f"{lines[-1]}{word}".lstrip(), direction)
 
             if new_line_width > max_width:
                 # Word is too long to fit on the current line
@@ -37,7 +37,7 @@ def wrap_text(
                 curr_line_width = word_width
             else:
                 # Put the word on the current line
-                lines[-1] = f"{lines[-1]}{word}"
+                lines[-1] = f"{lines[-1]}{word}".lstrip()
                 curr_line_width = new_line_width
 
     return "\n".join(lines)
@@ -51,10 +51,13 @@ for lang, d in config["languages"].items():
         emblem, (img.width - emblem.width + 40, img.height - emblem.height + 40), emblem
     )
 
+    margin_h = 100
+    logo_spacing = 50
+
     logo = Image.open("static/logo.png").resize((380, 380))
     img.paste(
         logo,
-        (100, img.height // 2 - logo.height // 2),
+        (margin_h, img.height // 2 - logo.height // 2),
         logo,
     )
 
@@ -67,7 +70,7 @@ for lang, d in config["languages"].items():
     wrapped_description = wrap_text(
         description_font,
         d["translations"]["home-lead"],
-        600,
+        img.width - logo.width - margin_h - logo_spacing - margin_h,
     )
 
     _, _, _, description_height = dr.multiline_textbbox(
@@ -80,10 +83,15 @@ for lang, d in config["languages"].items():
     offset = img.height // 2 - text_height // 2
 
     dr.fontmode = "L"
-    dr.text((570, offset), "Tango", fill=(0xF8, 0xF9, 0xFA), font=title_font)
+    dr.text(
+        (margin_h + logo.width + logo_spacing, offset),
+        "Tango",
+        fill=(0xF8, 0xF9, 0xFA),
+        font=title_font,
+    )
 
     dr.text(
-        (570, offset + title_height + spacing),
+        (margin_h + logo.width + logo_spacing, offset + title_height + spacing),
         wrapped_description,
         fill=(0xF8, 0xF9, 0xFA),
         font=description_font,
