@@ -18,6 +18,10 @@ home-panel-3-title = "Automatic replays"
 home-panel-3-description = "Get automatic, accurate replays of all your matches."
 home-panel-4-title = "Automatic ROM patching"
 home-panel-4-description = "Play online with your favorite custom patches."
+home-panel-5-title = "100% saves included"
+home-panel-5-description = "Build your dream folder immediately."
+home-panel-6-title = "Simple matchmaking"
+home-panel-6-description = "Just share your link code and start playing."
 footer = 'Mega Man Battle Network is a trademark of <a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>. Tango is a fan project and is not affiliated with, funded, or in any way associated with Capcom.'
 
 [languages.ja.translations]
@@ -38,6 +42,10 @@ home-panel-3-title = "自動リプレイ録画"
 home-panel-3-description = "対戦を完璧な精度で自動的に記録します。"
 home-panel-4-title = "自動ROMパッチ"
 home-panel-4-description = "カスタムパッチでオンラインプレイできます。"
+home-panel-5-title = "100％セーブファイルを含む"
+home-panel-5-description = "すぐに夢の構築を作ることができます。"
+home-panel-6-title = "簡単なマッチメイキング"
+home-panel-6-description = "リンクコードを共有するだけで、プレイを始めます。"
 footer = '「ロックマンエグゼ」は<a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>の商標です。Tangoはファンプロジェクトであり、CAPCOMとは一切関係ありません。'
 
 [languages.zh-CN.translations]
@@ -58,6 +66,10 @@ home-panel-3-title = "自动回放记录"
 home-panel-3-description = "自动记录所有战斗的精确回放。"
 home-panel-4-title = "自动ROM补丁"
 home-panel-4-description = "用你的自定义补丁进行在线游玩。"
+home-panel-5-title = "包含100%保存文件"
+home-panel-5-description = "立即建立你的梦想配置。"
+home-panel-6-title = "简单配对"
+home-panel-6-description = "只要分享你的链接代码并开始游戏。"
 footer = '《洛克人EXE》是<a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>的商标。Tango是粉丝项目，与CAPCOM无关。'
 
 [languages.es.translations]
@@ -78,4 +90,8 @@ home-panel-3-title = "Repeticiones automaticas"
 home-panel-3-description = "Obten repeticiones automaticas y precisas de todas tus partidas."
 home-panel-4-title = "Parchado de ROMs automatico"
 home-panel-4-description = "Juega en linea usando tus parches favoritos."
+home-panel-5-title = "100% guardadas incluido"
+home-panel-5-description = "Construya inmediatamente el folder de sus sueños."
+home-panel-6-title = "Emparejamiento sencillo"
+home-panel-6-description = "Sólo tienes que compartir el código de tu enlace y empezar a jugar."
 footer = 'Mega Man Battle Network es una marca registrada de <a href="https://www.capcom.com" target="_blank" class="text-white">CAPCOM CO., LTD</a>. Tango es un proyecto de fans y no se encuentra afiliado, financiado o asociado a Capcom de ninguna forma.'
