@@ -34,7 +34,7 @@ home-tagline = "ロックマンエグゼの古新体験"
 home-lead = "一緒に「ロックマンエグゼ」をロールバックネットコードでオンラインプレイしましょう！"
 home-download-button = "ダウンロード"
 home-download-button-toggle-dropdown = "トグルドロップダウン"
-home-download-notice = 'Steamからの「<a href="https://store.steampowered.com/sub/821963/?l=japanese" target="_blank">ロックマンエグゼ アドバンスドコレクション</a>」か、合法的に引きしたROMを持ちであることが条件です。Tangoの開発者は、いかなる種類の著作権侵害も<strong>絶対容認していません</strong>。'
+home-download-notice = 'Tangoはロックマンエグゼの対戦を拡張する対戦特化ツールです。 Tangoで遊ぶにはSteam版「<a href="https://store.steampowered.com/sub/821963/?l=japanese" target="_blank">ロックマンエグゼ アドバンスドコレクション</a>」が必要です。Tangoの開発者は、<strong>いかなる種類の著作権侵害も容認していません</strong>。'
 home-post-download-cta = "次に、以下のいずれかのコミュニティへ参加してプレイを始めましょう!"
 home-panel-1-title = "全部作品対応可能"
 home-panel-1-description = "英語と日本語のすべてのエグゼ作品に対応しています。"
