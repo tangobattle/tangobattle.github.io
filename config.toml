@@ -3,6 +3,7 @@ base_url = "https://tango.n1gp.net"
 [languages.en.translations]
 menu-blog = "Blog"
 menu-status = "Status"
+menu-github = "GitHub"
 menu-language = "Language"
 home-first-time = '<strong>First time here?</strong> For support and matchmaking, please join the <a href="https://discord.n1gp.net" target="_blank">N1GP</a> Discord server!'
 home-tagline = "The old new Mega Man Battle Network experience."
@@ -28,6 +29,7 @@ footer = 'Mega Man Battle Network is a trademark of <a href="https://www.capcom.
 [languages.ja.translations]
 menu-blog = "ブログ"
 menu-status = "ステータス"
+menu-github = "GitHub"
 menu-language = "言語"
 home-first-time = '<strong>ここは初めてですか？</strong>導入方法や対戦相手については、是非とも<a href="https://discord.gg/yF2gZfM8Dr" target="_blank">EXE Hello Hello Mango Coconut</a>のDiscordサーバーへご参加ください！'
 home-tagline = "ロックマンエグゼの古新体験"
@@ -53,6 +55,7 @@ footer = '「ロックマンエグゼ」は<a href="https://www.capcom.com" targ
 [languages.zh-CN.translations]
 menu-blog = "博客"
 menu-status = "状态"
+menu-github = "GitHub"
 menu-language = "语言"
 home-first-time = '<strong>第一次来？</strong>关于支持和对手配对，请加入<a href="https://jq.qq.com/?_wv=1027&k=we2L9Epb" target="_blank">QQ群310432370：洛克人EXE对战大会</a>！'
 home-tagline = "洛克人EXE的旧新体验"
@@ -78,6 +81,7 @@ footer = '《洛克人EXE》是<a href="https://www.capcom.com" target="_blank" 
 [languages.es.translations]
 menu-blog = "Blog"
 menu-status = "Estado"
+menu-github = "GitHub"
 menu-language = "Lenguaje"
 home-first-time = '<strong>¿Es tu primera vez aquí?</strong> Para asistencia y matchmaking, únete al servidor Discord de <a href="https://discord.gg/cKgTcvz" target="_blank">Net Saviors</a>.'
 home-tagline = "La vieja nueva experiencia en Mega Man Battle Network."
