@@ -193,7 +193,21 @@
                     </nav>
                 </header>
 
-                {% block content %}{% endblock %}
+                <div class="py-md-4">
+                    <div class="alert alert-danger d-flex align-items-center">
+                        <span
+                            class="material-symbols-outlined flex-shrink-0 me-2"
+                            style="font-size: 24px !important"
+                            >error</span
+                        >
+                        <span
+                            >{{trans(key='home-unsupported',
+                            lang=lang)|safe}}</span
+                        >
+                    </div>
+
+                    {% block content %}{% endblock %}
+                </div>
             </div>
         </main>
         <footer class="mt-auto text-muted">

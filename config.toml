@@ -5,6 +5,7 @@ menu-blog = "Blog"
 menu-status = "Status"
 menu-github = "GitHub"
 menu-language = "Language"
+home-unsupported = '<strong>Tango is no longer actively supported by the developer.</strong> There are no further updates expected to Tango.'
 home-first-time = '<strong>First time here?</strong> For support and matchmaking, please join the <a href="https://discord.n1gp.net" target="_blank">N1GP</a> Discord server!'
 home-tagline = "The old new Mega Man Battle Network experience."
 home-lead = "Play Mega Man Battle Network online with rollback netcode."
@@ -31,6 +32,7 @@ menu-blog = "ブログ"
 menu-status = "ステータス"
 menu-github = "GitHub"
 menu-language = "言語"
+home-unsupported = '<strong>Tangoは開発者による積極的なサポートは終了しています。</strong>Tangoのアップデートの予定はありません。'
 home-first-time = '<strong>ここは初めてですか？</strong>導入方法や対戦相手については、是非とも<a href="https://discord.gg/yF2gZfM8Dr" target="_blank">EXE Hello Hello Mango Coconut</a>のDiscordサーバーへご参加ください！'
 home-tagline = "ロックマンエグゼの古新体験"
 home-lead = "一緒に「ロックマンエグゼ」をロールバックネットコードでオンラインプレイしましょう！"
@@ -57,6 +59,7 @@ menu-blog = "博客"
 menu-status = "状态"
 menu-github = "GitHub"
 menu-language = "语言"
+home-unsupported = '<strong>Tango不再由开发者提供支持。</strong>Tango将不再更新。'
 home-first-time = '<strong>第一次来？</strong>关于支持和对手配对，请加入<a href="https://jq.qq.com/?_wv=1027&k=we2L9Epb" target="_blank">QQ群310432370：洛克人EXE对战大会</a>！'
 home-tagline = "洛克人EXE的旧新体验"
 home-lead = "使用回滚净码跟朋友一起《洛克人EXE》网络对战！"
@@ -83,6 +86,7 @@ menu-blog = "Blog"
 menu-status = "Estado"
 menu-github = "GitHub"
 menu-language = "Lenguaje"
+home-unsupported = '<strong>Tango ya no recibe soporte activo por parte del desarrollador.</strong> No se esperan más actualizaciones de Tango.'
 home-first-time = '<strong>¿Es tu primera vez aquí?</strong> Para asistencia y matchmaking, únete al servidor Discord de <a href="https://discord.gg/cKgTcvz" target="_blank">Net Saviors</a>.'
 home-tagline = "La vieja nueva experiencia en Mega Man Battle Network."
 home-lead = "Juega Mega Man Battle Network online usando netcode rollback."
