@@ -5,7 +5,7 @@ menu-blog = "Blog"
 menu-status = "Status"
 menu-github = "GitHub"
 menu-language = "Language"
-home-unsupported = '<strong>Tango is no longer actively supported by the developer.</strong> There are no further updates expected to Tango.'
+home-unsupported = '<strong>Tango is feature-complete and no longer in development.</strong> Community-sourced updates are welcome.'
 home-first-time = '<strong>First time here?</strong> For support and matchmaking, please join the <a href="https://discord.n1gp.net" target="_blank">N1GP</a> Discord server!'
 home-tagline = "The old new Mega Man Battle Network experience."
 home-lead = "Play Mega Man Battle Network online with rollback netcode."
