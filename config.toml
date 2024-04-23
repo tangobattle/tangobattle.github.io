@@ -11,7 +11,7 @@ home-tagline = "The old new Mega Man Battle Network experience."
 home-lead = "Play Mega Man Battle Network online with rollback netcode."
 home-download-button = "Download"
 home-download-button-toggle-dropdown = "Toggle dropdown"
-home-download-notice = 'You must have a copy of either <a href="https://store.steampowered.com/sub/821963/?l=english" target="_blank">Mega Man Battle Network Legacy Collection</a> on Steam. The Tango developers <strong>do not condone piracy of any kind</strong>.'
+home-download-notice = 'You must have a copy of <a href="https://store.steampowered.com/sub/821963/?l=english" target="_blank">Mega Man Battle Network Legacy Collection</a> on Steam. The Tango developers <strong>do not condone piracy of any kind</strong>.'
 home-post-download-cta = "… then, join a community below to start playing!"
 home-panel-1-title = "Supports all games"
 home-panel-1-description = "Works with every English and Japanese Battle Network game."
